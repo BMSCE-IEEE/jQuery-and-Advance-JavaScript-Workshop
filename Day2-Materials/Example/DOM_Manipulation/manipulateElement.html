@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery DOM</title>
+    <script src="jquery-3.1.0.min.js"></script>
+<style>
+    .highlight {
+        color: blue;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+<div>
+    <h2>Movies to watch</h2>
+    <ul id="movieList">
+        <li id="movie1">Snowden</li>
+        <li id="movie2" class="highlight">Assassin's Creed</li>
+        <li id="movie3">Minecraft</li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function() {
+        // To read text content of movie2
+        // var movieName = $("#movie2").text();
+        // alert(movieName);
+
+        // var userChoice = prompt("Enter a movie name : ");
+        // $("#movie2").text(userChoice);
+
+        // $("#movie2").css("color", "red");
+
+        $("#movie3").addClass("highlight");
+        $("#movie2").removeClass("highlight");
+
+    });
+</script>
+</body>
+</html>

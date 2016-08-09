@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery first() Demo</title>
+<style type="text/css">
+    .highlight{
+        background: yellow;
+    }        
+</style>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("ul li").first().addClass("highlight");
+});
+</script>
+</head>
+<body>
+    <ul>
+        <li>First list item</li>
+        <li>Second list item</li>
+        <li>Third list item</li>
+        <li>Last list item</li>
+    </ul>
+</body>
+</html>

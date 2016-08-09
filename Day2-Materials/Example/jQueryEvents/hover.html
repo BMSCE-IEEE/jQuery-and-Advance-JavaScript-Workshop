@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Events</title>
+    <script src="jquery-3.1.0.min.js"></script>
+<style>
+    .highlight {
+        color: blue;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+<div>
+    <h2>Movies to watch</h2>
+    <ul id="movieList">
+        <li id="movie1">Snowden</li>
+        <li id="movie2">Assassin's Creed</li>
+        <li id="movie3">Minecraft</li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function() {
+        $('li').hover(function() {
+            $(this).css("background-color", "green");
+        });
+    });
+</script>
+</body>
+</html>
