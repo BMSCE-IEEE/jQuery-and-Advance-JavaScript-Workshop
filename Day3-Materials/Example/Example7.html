@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>The jQuery Example</title>
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+$("#down").click(function(){
+$(".target").slideDown( 'slow', function(){
+$(".log").text('Slide Down Transition Complete');
+});
+});
+$("#up").click(function(){
+$(".target").slideUp( 'slow', function(){
+$(".log").text('Slide Up Transition Complete');
+});
+});
+});
+</script>
+<style>
+p {background-color:#bca; width:200px; border:1px solid green;}
+</style>
+</head>
+<body>
+<p>Click on any of the buttons</p>
+<button id="up"> Slide Up </button>
+<button id="down"> Slide Down</button>
+<div class="target">
+<img src="./images/jquery.jpg" alt="jQuery" />
+</div>
+<div class="log"></div>
+</body>
+</html>
