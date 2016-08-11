@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSON Object Creation</title>
+<script src="jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#button1').click(function(){
+var city=$('input:text[name=city]').val();
+$.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+city,function(data){
+$.each(data.results,function(key,value){
+//console.log(value.address_components.short_name);
+$('#pincode').html(value.address_components[4].short_name);
+});
+});
+});
+});
+</script>
+<h2>JSON Google Maps: Extracting Pincode</h2>
+<p id="paragraphText"></p>
+<h4>Enter City Name</h4>
+<form id="target" action="">
+  <input type="text" name="city">
+  <br />
+  <input type="button" id="button1" value="Submit"/>
+</form>
+<h4>Pincode</h4>
+<div id="pincode">
+</div>
+</body>
+</html>

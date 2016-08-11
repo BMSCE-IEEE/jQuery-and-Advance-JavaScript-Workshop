@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>JSON</title>
+<script src="jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var college = [
+{
+"name":"BMS",
+"street":"Bull Temple Road",
+"phone":"080-246599"
+},
+{
+"name":"RV",
+"street":"Mysore Road",
+"phone":"080-599246"
+},
+];
+var result='';
+result+="Name: "+college[0].name+'<br />';
+result+="Street: "+college[0].street+'<br />';
+result+="Phone: "+college[0].phone+'<br />';
+result+='<br/>';
+result+="Name: "+college[1].name+'<br />';
+result+="Street: "+college[1].street+'<br />';
+result+="Phone: "+college[1].phone+'<br />';
+$('#divResult').html(result);
+});
+</script>
+</head>
+<body>
+<h2>JSON Object Creation in JavaScript</h2>
+<div id="divResult"></div>
+</body>
+</html>
+
+

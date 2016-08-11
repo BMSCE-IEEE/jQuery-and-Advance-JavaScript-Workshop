@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head> <title>JSON Object Creation</title>
+<script src="jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var college = {"name":"BMS",
+             "street":"Bull Temple Road",
+             "phone":"080-246599"};
+var result='';
+result+="Name: "+college.name+'<br />';
+result+="Street: "+college.street+'<br />';
+result+="Phone: "+college.phone+'<br />';
+<!-- document.getElementById("divResult").innerHTML =result; -->
+$('#divResult').html(result);
+});
+</script>
+<head>
+<body>
+<h2>JSON Object Creation in JavaScript</h2>
+<div id="divResult"></div>
+</body>
+</html>
+
+

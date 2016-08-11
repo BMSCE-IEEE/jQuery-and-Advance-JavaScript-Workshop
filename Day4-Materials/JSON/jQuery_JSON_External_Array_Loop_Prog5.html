@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSON Object Creation</title>
+<script src="jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+$.getJSON('external.json',function(data){
+$.each(data.book,function(key,value){
+console.log(value.id);
+console.log(value.language);
+console.log(value.edition);
+console.log(value.author);
+});
+});
+});
+</script>
+<h2>JSON Book Object Creation</h2>
+<p id="paragraphText"></p>
+</body>
+</html>
+
+
+
+

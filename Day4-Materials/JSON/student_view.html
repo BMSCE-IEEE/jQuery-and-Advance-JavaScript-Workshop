@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> jQuery </title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+	loadData();
+	});
+    var loadData=function(){
+    $.ajax({type:"POST",url:"students.php"}).done(function(data){console.log(data)
+    var users=JSON.parse(data);
+    for(var i in users){
+    $("#content").append(users[i].usn+" "+users[i].name+"<br />");
+    }
+    });
+    }
+</script>
+<h4>MySQL Database Retrieved as JSON Data</h4>
+<div id="content"></div>
+</body>
+</html>
+
+
+
+
+

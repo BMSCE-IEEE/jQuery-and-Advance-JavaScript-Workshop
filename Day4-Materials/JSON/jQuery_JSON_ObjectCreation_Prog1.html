@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSON Object Creation</title>
+<script src="jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+//JSON object Creation
+var student ={
+"Name":"Aditya",
+"USN":"1BM14CS001",
+"Marks":25
+};
+$(document).ready(function(){
+$('#paragraphText').html(student["Name"]+"  "+student.USN+"  "+student.Marks);
+});
+</script>
+<h2>JSON Object Creation in JavaScript</h2>
+<p id="paragraphText"></p>
+</body>
+</html>
+
+
